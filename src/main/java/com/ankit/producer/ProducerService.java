@@ -13,7 +13,7 @@ public class ProducerService {
 
     public void publish(Message message){
         Properties props1 = new Properties();
-        props1.put("bootstrap.servers", "localhost:9093");
+        props1.put("bootstrap.servers", "localhost:9093,localhost:9094");
         props1.put("acks", "all");
         props1.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props1.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
